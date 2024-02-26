@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { Item } from "./item";
+
 @Component({
   selector: "app-root",
   standalone: true,
@@ -34,5 +36,9 @@ export class AppComponent {
       description,
       done: false
     });
+  }
+
+  remove(item: Item) {
+    this.appItems.splice(this.appItems.indexOf(item), 1);
   }
 }
