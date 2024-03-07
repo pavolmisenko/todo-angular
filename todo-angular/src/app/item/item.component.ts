@@ -1,10 +1,13 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { CommonModule } from '@angular/common';
 import { Item } from "../item";
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
-  styleUrl: './item.component.css'
+  styleUrl: './item.component.css',
+  imports: [CommonModule],
+  standalone: true
 })
 export class ItemComponent {
 
